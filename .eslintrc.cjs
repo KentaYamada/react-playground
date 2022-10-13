@@ -1,7 +1,7 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    es2021: true
   },
   extends: [
     "airbnb",
@@ -9,16 +9,17 @@ module.exports = {
     "airbnb/hooks",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier"
   ],
   overrides: [],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
-      jsx: true,
+      jsx: true
     },
     ecmaVersion: "latest",
     sourceType: "module",
-    project: "./tsconfig.json",
+    project: "./tsconfig.json"
   },
   plugins: ["react", "react-hooks", "@typescript-eslint", "unused-imports"],
   ignorePatterns: [".eslintrc.cjs"],
@@ -32,15 +33,15 @@ module.exports = {
       2,
       {
         namedComponents: "arrow-function",
-        unnamedComponents: "arrow-function",
-      },
+        unnamedComponents: "arrow-function"
+      }
     ],
     "react/jsx-key": [
       "error",
       {
         checkFragmentShorthand: true,
-        warnOnDuplicates: true,
-      },
+        warnOnDuplicates: true
+      }
     ],
     "@typescript-eslint/no-unused-vars": "off",
     "import/prefer-default-export": "off",
@@ -56,20 +57,20 @@ module.exports = {
           "index",
           "unknown",
           "object",
-          "type",
+          "type"
         ],
         alphabetize: {
           order: "asc",
-          caseInsensitive: true,
+          caseInsensitive: true
         },
         pathGroups: [
           {
             pattern: "react*",
             group: "external",
-            position: "before",
-          },
-        ],
-      },
+            position: "before"
+          }
+        ]
+      }
     ],
     "unused-imports/no-unused-imports": "error",
     "unused-imports/no-unused-vars": [
@@ -77,13 +78,13 @@ module.exports = {
       {
         vars: "all",
         varsIgnorePattern: "^_",
-        args: "after-used",
-      },
-    ],
+        args: "after-used"
+      }
+    ]
   },
   settings: {
     react: {
-      version: "detect",
-    },
-  },
+      version: "detect"
+    }
+  }
 };

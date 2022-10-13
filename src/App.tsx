@@ -1,9 +1,7 @@
-import React from 'react';
-import { RouterProvider } from 'react-router-dom';
-import router from './router';
+import React from "react";
+import { RouterProvider } from "react-router-dom";
+import router from "./router";
 
-const App: React.VFC = () => (
-  <RouterProvider router={router} />
-);
+const App: React.VFC = () => <RouterProvider router={router} />;
 
 export default App;
