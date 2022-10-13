@@ -20,7 +20,7 @@ module.exports = {
     sourceType: "module",
     project: "./tsconfig.json",
   },
-  plugins: ["react", "react-hooks", "@typescript-eslint"],
+  plugins: ["react", "react-hooks", "@typescript-eslint", "unused-imports"],
   ignorePatterns: [".eslintrc.cjs"],
   rules: {
     "react/jsx-uses-react": "error",
@@ -44,6 +44,15 @@ module.exports = {
     ],
     "@typescript-eslint/no-unused-vars": "off",
     "import/prefer-default-export": "off",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        vars: "all",
+        varsIgnorePattern: "^_",
+        args: "after-used",
+      },
+    ],
   },
   settings: {
     react: {
