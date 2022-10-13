@@ -44,6 +44,33 @@ module.exports = {
     ],
     "@typescript-eslint/no-unused-vars": "off",
     "import/prefer-default-export": "off",
+    "import/order": [
+      "error",
+      {
+        groups: [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "unknown",
+          "object",
+          "type",
+        ],
+        alphabetize: {
+          order: "asc",
+          caseInsensitive: true,
+        },
+        pathGroups: [
+          {
+            pattern: "react*",
+            group: "external",
+            position: "before",
+          },
+        ],
+      },
+    ],
     "unused-imports/no-unused-imports": "error",
     "unused-imports/no-unused-vars": [
       "warn",
