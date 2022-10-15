@@ -7,8 +7,14 @@ module.exports = {
     "airbnb",
     "airbnb-typescript",
     "airbnb/hooks",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react/jsx-runtime",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
     "prettier"
   ],
   overrides: [],
@@ -45,6 +51,15 @@ module.exports = {
     ],
     "@typescript-eslint/no-unused-vars": "off",
     "import/prefer-default-export": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        js: "never",
+        ts: "never",
+        tsx: "never"
+      }
+    ],
     "import/order": [
       "error",
       {
