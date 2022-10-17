@@ -1,23 +1,9 @@
 module.exports = {
+  root: true,
   env: {
     browser: true,
     es2021: true
   },
-  extends: [
-    "airbnb",
-    "airbnb-typescript",
-    "airbnb/hooks",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:react/jsx-runtime",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:import/typescript",
-    "prettier"
-  ],
-  overrides: [],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
@@ -27,7 +13,26 @@ module.exports = {
     sourceType: "module",
     project: "./tsconfig.json"
   },
-  plugins: ["react", "react-hooks", "@typescript-eslint", "unused-imports"],
+  extends: [
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:import/recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier"
+  ],
+  plugins: [
+    "import",
+    "react",
+    "react-hooks",
+    "unused-imports",
+    "@typescript-eslint"
+  ],
+  overrides: [],
   ignorePatterns: [".eslintrc.cjs"],
   rules: {
     "react/jsx-uses-react": "error",
@@ -51,15 +56,6 @@ module.exports = {
     ],
     "@typescript-eslint/no-unused-vars": "off",
     "import/prefer-default-export": "off",
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        js: "never",
-        ts: "never",
-        tsx: "never"
-      }
-    ],
     "import/order": [
       "error",
       {
@@ -98,6 +94,13 @@ module.exports = {
     ]
   },
   settings: {
+    "import/resolver": {
+      typescript: true,
+      node: {
+        extensions: [".js", ".jsx", ".ts", ".tsx"]
+      }
+    },
+    "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
     react: {
       version: "detect"
     }
