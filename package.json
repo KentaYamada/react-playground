@@ -8,7 +8,10 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "test": "vitest --config ./vitest.config.ts",
-    "coverage": "vitest run --coverage --config ./vitest.config.ts"
+    "coverage": "vitest run --coverage --config ./vitest.config.ts",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "format": "prettier --write \"**/*.+(js|jsx|json|cjs|ts|tsx)\""
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -23,8 +26,17 @@
     "@testing-library/user-event": "^14.4.3",
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0",
     "@vitejs/plugin-react": "^2.2.0",
+    "eslint": "^8.28.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "happy-dom": "^7.7.0",
+    "prettier": "^2.7.1",
     "typescript": "^4.6.4",
     "vite": "^3.2.3",
     "vitest": "^0.25.2"
