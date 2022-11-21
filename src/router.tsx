@@ -1,10 +1,11 @@
 import { createBrowserRouter, Route, RouterProvider } from "react-router-dom";
 import App from "./App";
+import PageA from "./pages/pageA";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <App/>
+        element: <PageA/>
     },
     {
         path: "/a",
