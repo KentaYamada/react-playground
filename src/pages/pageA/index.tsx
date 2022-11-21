@@ -1,29 +1,31 @@
-import reactLogo from '../../assets/react.svg'
-import {  useState, FunctionComponent } from 'react';
-import { css } from '@emotion/react';
+import reactLogo from "../../assets/react.svg";
+import { FunctionComponent } from "react";
+import { css } from "@emotion/react";
 import "../../App.css";
-import '../../index.css';
+import "../../index.css";
+import { useRecoilState } from "recoil";
+import { counterState } from "../../states/counter-state";
 
 const style = css({
   color: "blue"
 });
 
 const PageA: FunctionComponent = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useRecoilState(counterState);
 
   return (
     <div className="App">
       <div>
-        <a href="https://vitejs.dev" target="_blank">
+        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
         </a>
-        <a href="https://reactjs.org" target="_blank">
+        <a href="https://reactjs.org" target="_blank" rel="noreferrer">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
       <h1 css={style}>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button onClick={() => setCount(count => count + 1)}>
           count is {count}
         </button>
         <p>
