@@ -1,10 +1,10 @@
-import reactLogo from "../../assets/react.svg";
 import { FunctionComponent } from "react";
 import { css } from "@emotion/react";
 import "../../App.css";
 import "../../index.css";
 import { useRecoilState } from "recoil";
 import { counterState } from "../../states/counter-state";
+import reactLogo from "../../assets/react.svg";
 
 const style = css({
   color: "blue"
@@ -25,7 +25,7 @@ const PageA: FunctionComponent = () => {
       </div>
       <h1 css={style}>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount(count => count + 1)}>
+        <button type="button" onClick={() => setCount(count + 1)}>
           count is {count}
         </button>
         <p>
