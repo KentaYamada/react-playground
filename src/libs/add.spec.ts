@@ -1,4 +1,4 @@
-import { add } from "./add";
+import { add } from "@libs/add";
 
 describe("add.ts", () => {
   it("1 + 1 = 2", () => {

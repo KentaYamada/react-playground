@@ -1,10 +1,10 @@
 import { FunctionComponent } from "react";
 import { css } from "@emotion/react";
-import "../../App.css";
-import "../../index.css";
+import "@/App.css";
+import "@/index.css";
 import { useRecoilState } from "recoil";
 import { counterState } from "../../states/counter-state";
-import reactLogo from "../../assets/react.svg";
+import reactLogo from "@/assets/react.svg";
 
 const style = css({
   color: "blue"
