@@ -1,8 +1,8 @@
 import "@testing-library/jest-dom";
-import { render, screen } from "@testing-library/react";
-import { RecoilRoot } from "recoil";
-import userEvent from "@testing-library/user-event";
 import PageA from "@pages/pageA";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+import { RecoilRoot } from "recoil";
 
 describe("PageA component tests", () => {
   it("should icrement count on click", async () => {

@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
-import { render, screen } from "@testing-library/react";
 import { HelloWorldComponent } from "@components/helloworld/helloworld.component";
+import { render, screen } from "@testing-library/react";
 
 describe("HelloWorldComponent tests", () => {
   test("`Hello World`が描画されている", () => {

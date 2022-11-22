@@ -44,8 +44,8 @@ module.exports = {
     "react/function-component-definition": [
       2,
       {
-        namedComponents: "arrow-function",
-        unnamedComponents: "arrow-function"
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
       }
     ],
     // note: https://emotion.sh/docs/eslint-plugin-react
@@ -53,6 +53,38 @@ module.exports = {
       "error",
       {
         "ignore": ["css"]
+      }
+    ],
+    "import/order": [
+      'error',
+      {
+        "newlines-between": "never",
+        "groups": [
+          "builtin",
+          "external",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "{react,react-dom/**,react-router-dom}",
+            "group": "builtin",
+            "position": "before"
+          },
+          {
+            "pattern": "@src/&&",
+            "group": "parent",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
       }
     ]
   }
